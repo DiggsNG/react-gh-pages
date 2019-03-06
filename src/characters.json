@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "name": "Bran",
+      "image": "./img/bran.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 2,
+      "name": "Daenery",
+      "image": "./img/Daenerys.jpg",
+      "clicked":false
+      
+    },
+    {
+      "id": 3,
+      "name": "Jon Snow",
+      "image": "./img/jonsnow.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 4,
+      "name": "Cersei and Jamie Lannister",
+      "image": "./img/jammieandcersie.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 5,
+      "name": "Sansa Stark",
+      "image": "./img/sonsa.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 6,
+      "name": "Dragon",
+      "image": "./img/dragon.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 7,
+      "name": "Ice Dragon",
+      "image": "./img/icedragons.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 8,
+      "name": "Rhaegar Targaryen",
+      "image": "./img/rhaegar.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 9,
+      "name": "Kal Drago",
+      "image": "./img/kaldrago.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 10,
+      "name": "Tyrion",
+      "image": "./img/tyrion.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 11,
+      "name": "Night King",
+      "image": "./img/whitewalker.jpg",
+      "clicked": false
+      
+    },
+    {
+      "id": 12,
+      "name": "Undead",
+      "image": "./img/undead.jpg",
+      "clicked": false
+      
+    }
+  ]
+  

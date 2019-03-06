@@ -1,0 +1,117 @@
+import React, { Component } from "react";
+import Card from "./components/Card";
+import {Line} from "rc-progress"
+import Wrapper from "./components/Wrapper";
+import Characters from "./characters.json";
+import "./App.css";
+
+//Setting counters for game
+let topScore = 0;
+let correctCount = 0;
+let dragons = 0;
+let message = "";
+
+
+class App extends Component {
+  // Setting this.state.friends to the friends json array
+  state = {
+   Characters,
+   topScore,
+   correctCount,
+   message,
+   dragons
+  };
+
+  setClicked = id => {
+    const Games = this.state.Characters;
+    const cardClicked = Characters.filter(Character => Game.id = Character.id === id);
+    
+    if (cardClicked[0].clicked) {
+
+      correctCount = 0;
+      message = "Pay attention. You need to start over";
+
+      for (let i = 0; i < Characters.length; i++) {
+           Characters[i].clicked = false;
+      }
+
+      this.setState({ messge });
+      this.setState({correctCount});
+      this.setState({Games});
+
+    } else {
+       cardClicked[0].clicked = true;
+       correctCount = correctCount + 4;
+       messge = "Great Guess !!";
+
+    }
+    Characters.sort((a, b) => {
+       return 0.5 -Math.random();
+    
+    });
+
+    this.setState({Characters});
+    this.setState({correctCount});
+    this.setState({message});
+    
+  }
+  
+};
+    
+ renderDragons() {
+
+   let divs = [];
+
+   for (let i = 0; i <this.state.dragons; i++) {
+        div.push(<div key={i} className="dragon"></div>)
+   }
+   return <div>{divs}</div>
+ };
+
+   //Render a GameCard component for each game object
+  render() {
+
+    return (
+
+      <Wrapper>
+        <div className="hero">
+          <div className="heroText">
+            <h1 className="banner">Winter is Comming Click Game</h1>
+            <h3 className="rules">Defeat the Whitewalkers! Choose wisely.</h3>
+            <h3 className="message">{this.state.message}</h3>
+        </div>
+      <div className="buttonWrapper">
+        <img className="buttons" src="images/buttons.png" alt="zelda buttons" />
+      </div>
+      <div className="dragonWrapper">
+        {this.renderDragons()}
+        <Line 
+            className="progress-bar"
+            percent={this.state.correctCount}
+            trailWidth="8" 
+            strokeWidth="8" 
+            strokeColor="#87df6f"
+          strokeLinecap="square" />
+      </div>
+    </div>
+        <div className="row">
+          {this.state.Characters.map(Character => (
+            <Card
+              setClicked={this.setClicked}
+              id={Character.id}
+              key={Character.id}
+              image={Character.image}
+              name={Character.name}
+              className="col-sm-1"
+            />
+          ))}
+
+        </div>
+
+      </Wrapper>
+  );
+};
+
+;
+
+export default App;
